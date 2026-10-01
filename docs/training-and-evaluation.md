@@ -35,7 +35,7 @@ microbanとの関節間距離、および寸法依存する学習評価の監査
 歩行用距離・高さ閾値はKHRへそのまま転用しません。
 
 ```bash
-cd <your-ros2-workspace>/src/KHRBan
+cd /path/to/ros2_ws/src/KHRBan
 uv sync
 uv run khrban-train --task standing --num-envs 1024 --iterations 2000
 ```

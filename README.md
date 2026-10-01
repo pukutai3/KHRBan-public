@@ -22,10 +22,10 @@ KHR-3HV（22軸）のMuJoCo/MjLabモデルと、速度指令に追従する歩�
 
 ## 使い始める
 
-Python 3.12と`uv`を使います。ROS 2ワークスペースの`src`にこのリポジトリを`KHRBan`として配置します。`microban`を並べて置く場合も、参照用の原本は変更しません。BAM依存は`pyproject.toml`で固定commitを参照します。
+Python 3.12と`uv`を使います。ROS 2ワークスペースの`src`にこのリポジトリを`KHRBan`として配置します。下の`/path/to/ros2_ws`は自分のワークスペースのパスに置き換えてください。`microban`を並べて置く場合も、参照用の原本は変更しません。BAM依存は`pyproject.toml`で固定commitを参照します。
 
 ```bash
-cd <your-ros2-workspace>/src
+cd /path/to/ros2_ws/src
 git clone https://github.com/pukutai3/KHRBan-public.git KHRBan
 cd KHRBan
 uv sync
