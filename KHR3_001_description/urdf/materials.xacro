@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<robot name="KHR3_001" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="material_base_link">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_c_chest_a_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_c_chest_b_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_c_chest_c_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_c_head_a_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_l_ankle_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_l_elbow_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_l_foot_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_l_hipjointlower_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_l_hipjointupper_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_l_lowerarm_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_l_lowerreg_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_l_shoulder_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_l_upperarm_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_l_upperreg_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_r_ankle_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_r_elbow_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_r_foot_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_r_hipjointlower_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_r_hipjointupper_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_r_lowerarm_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_r_lowerreg_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_r_shoulder_1">
+  <color rgba="0.227451 0.227451 0.223529 1.000000"/>
+</material>
+
+<material name="material_r_upperarm_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+<material name="material_r_upperreg_1">
+  <color rgba="0.960784 0.960784 0.952941 1.000000"/>
+</material>
+
+</robot>

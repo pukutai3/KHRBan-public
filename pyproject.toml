@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "khrban"
+version = "0.1.0"
+description = "KHR actuator configuration and reinforcement-learning support"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "better-actuator-models[mjlab]",
+]
+
+[project.scripts]
+khrban-play = "khrban.play:main"
+khrban-motion-viewer = "khrban.motion_viewer:main"
+khrban-training-viewer = "khrban.training_viewer:main"
+khrban-train = "khrban.train:main"
+khrban-auto-train = "khrban.auto_train:main"
+khrban-auto-train-getup = "khrban.auto_train_getup:main"
+khrban-evaluate = "khrban.evaluation:main"
+khrban-getup-evaluate = "khrban.getup_evaluation:main"
+khrban-keyboard-policy = "khrban.keyboard_policy:main"
+
+[dependency-groups]
+dev = [
+  "pillow>=11.0",
+  "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv.sources]
+better-actuator-models = { git = "https://github.com/Rhoban/bam.git", rev = "620a64fe67c1afe94fca81da73b128c7aed17c5f" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

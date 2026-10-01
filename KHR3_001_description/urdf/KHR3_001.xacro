@@ -1,0 +1,718 @@
+<?xml version="1.0" ?>
+<robot name="KHR3_001" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find KHR3_001_description)/urdf/materials.xacro" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0004860989233068227 0.009532810756286876 0.27413898086600197" rpy="0 0 0"/>
+    <mass value="0.1340821317466695"/>
+    <inertia ixx="6.3e-05" iyy="3.6e-05" izz="6.8e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_base_link"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="c_chest_c_1">
+  <inertial>
+    <origin xyz="-9.075647373437204e-05 -4.299695896721467e-08 0.04371354326547933" rpy="0 0 0"/>
+    <mass value="0.1751250442918047"/>
+    <inertia ixx="0.000158" iyy="6.6e-05" izz="0.000176" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.010956 -0.009542 -0.29475" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_chest_c_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_c_chest_c_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.010956 -0.009542 -0.29475" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_chest_c_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="c_chest_b_1">
+  <inertial>
+    <origin xyz="-0.02736256237252084 2.8405186139127125e-06 0.004477857770456339" rpy="0 0 0"/>
+    <mass value="0.08659748664099912"/>
+    <inertia ixx="0.000118" iyy="5.2e-05" izz="9.8e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015044 -0.009542 -0.326" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_chest_b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_c_chest_b_1"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015044 -0.009542 -0.326" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_chest_b_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="c_chest_a_1">
+  <inertial>
+    <origin xyz="0.004546802047891985 -4.3088009722691556e-08 -0.002478844882515263" rpy="0 0 0"/>
+    <mass value="0.033763923840640864"/>
+    <inertia ixx="3.4e-05" iyy="1.9e-05" izz="3.6e-05" ixy="0.0" iyz="-0.0" ixz="-3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.036956 -0.009542 -0.326" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_chest_a_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_c_chest_a_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.036956 -0.009542 -0.326" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_chest_a_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="c_head_a_1">
+  <inertial>
+    <origin xyz="0.0030794307766838433 -4.398312582372388e-08 0.022888843043797014" rpy="0 0 0"/>
+    <mass value="0.012778861662402219"/>
+    <inertia ixx="2e-06" iyy="4e-06" izz="3e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022456 -0.009542 -0.35425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_head_a_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_c_head_a_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022456 -0.009542 -0.35425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/c_head_a_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_shoulder_1">
+  <inertial>
+    <origin xyz="0.0001694037375137153 0.008747288709026475 3.275157922644212e-14" rpy="0 0 0"/>
+    <mass value="0.01212036782921271"/>
+    <inertia ixx="1e-06" iyy="4e-06" izz="4e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022456 -0.058442 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_shoulder_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022456 -0.058442 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_upperarm_1">
+  <inertial>
+    <origin xyz="-0.0225653184925299 -4.2996961130414846e-08 -0.035645845152499855" rpy="0 0 0"/>
+    <mass value="0.09077338253436834"/>
+    <inertia ixx="5.4e-05" iyy="6.4e-05" izz="1.8e-05" ixy="0.0" iyz="0.0" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.038206 -0.083442 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_upperarm_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.038206 -0.083442 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_elbow_1">
+  <inertial>
+    <origin xyz="5.745484732988526e-05 -4.299695875731313e-08 -0.012574921301198416" rpy="0 0 0"/>
+    <mass value="0.044771268874731554"/>
+    <inertia ixx="6e-06" iyy="8e-06" izz="1e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022206 -0.083442 -0.27075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_elbow_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022206 -0.083442 -0.27075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_lowerarm_1">
+  <inertial>
+    <origin xyz="0.00017641885408353764 -0.015692428343568668 -0.0456965391176124" rpy="0 0 0"/>
+    <mass value="0.029838058097775663"/>
+    <inertia ixx="1.8e-05" iyy="1.6e-05" izz="4e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.033706 -0.099692 -0.25625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_lowerarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_lowerarm_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.033706 -0.099692 -0.25625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_lowerarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_shoulder_1">
+  <inertial>
+    <origin xyz="0.00016940373733527817 -0.00874737470294372 5.2458037913538647e-14" rpy="0 0 0"/>
+    <mass value="0.012120367829212731"/>
+    <inertia ixx="1e-06" iyy="4e-06" izz="4e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022456 0.039358 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_shoulder_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022456 0.039358 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_upperarm_1">
+  <inertial>
+    <origin xyz="-0.022565318492529674 -4.299696106102591e-08 -0.035645845152499855" rpy="0 0 0"/>
+    <mass value="0.09077338253436834"/>
+    <inertia ixx="5.4e-05" iyy="6.4e-05" izz="1.8e-05" ixy="0.0" iyz="0.0" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.038206 0.064358 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_upperarm_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.038206 0.064358 -0.3425" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_elbow_1">
+  <inertial>
+    <origin xyz="5.7454847330107306e-05 -4.299695864629083e-08 -0.012574921301198416" rpy="0 0 0"/>
+    <mass value="0.044771268874731526"/>
+    <inertia ixx="6e-06" iyy="8e-06" izz="1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022206 0.064358 -0.27075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_elbow_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022206 0.064358 -0.27075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_lowerarm_1">
+  <inertial>
+    <origin xyz="0.00017641885409563907 0.015692342349686986 -0.04569653911759183" rpy="0 0 0"/>
+    <mass value="0.029838058097763544"/>
+    <inertia ixx="1.8e-05" iyy="1.6e-05" izz="4e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.033706 0.080608 -0.25625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_lowerarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_lowerarm_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.033706 0.080608 -0.25625" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_lowerarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_hipjointupper_1">
+  <inertial>
+    <origin xyz="3.2937645154926254e-05 -0.0011113374509284478 -0.00740019979397627" rpy="0 0 0"/>
+    <mass value="0.005702042499396518"/>
+    <inertia ixx="1e-06" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.010956 -0.031242 -0.25575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_hipjointupper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_hipjointupper_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.010956 -0.031242 -0.25575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_hipjointupper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_hipjointlower_1">
+  <inertial>
+    <origin xyz="-0.016250242301438546 0.011463181378778015 -0.006653941986628803" rpy="0 0 0"/>
+    <mass value="0.06689532645492413"/>
+    <inertia ixx="2e-05" iyy="1.4e-05" izz="1.5e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.027656 -0.027242 -0.233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_hipjointlower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_hipjointlower_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.027656 -0.027242 -0.233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_hipjointlower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_upperreg_1">
+  <inertial>
+    <origin xyz="0.0025897804665519324 -0.016500042996958703 -0.03375567398425397" rpy="0 0 0"/>
+    <mass value="0.09097466003274822"/>
+    <inertia ixx="5.9e-05" iyy="5.6e-05" izz="1.3e-05" ixy="0.0" iyz="-0.0" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011406 -0.054742 -0.1935" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_upperreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_upperreg_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011406 -0.054742 -0.1935" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_upperreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_lowerreg_1">
+  <inertial>
+    <origin xyz="0.004480568094999009 -0.015970110512917204 -0.041821006993800466" rpy="0 0 0"/>
+    <mass value="0.060944352048083926"/>
+    <inertia ixx="2.9e-05" iyy="2.6e-05" izz="1.1e-05" ixy="0.0" iyz="-0.0" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011406 -0.054742 -0.1285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_lowerreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_lowerreg_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011406 -0.054742 -0.1285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_lowerreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_ankle_1">
+  <inertial>
+    <origin xyz="0.0001886240331466279 -0.016663910693020582 -0.03292964719213732" rpy="0 0 0"/>
+    <mass value="0.06757551562559609"/>
+    <inertia ixx="2e-05" iyy="1.4e-05" izz="1.6e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.008043 -0.055242 -0.063587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_ankle_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.008043 -0.055242 -0.063587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="l_foot_1">
+  <inertial>
+    <origin xyz="-0.02070015120765394 0.02389517254474378 -0.021244534057540506" rpy="0 0 0"/>
+    <mass value="0.03847104970565029"/>
+    <inertia ixx="2.3e-05" iyy="4.8e-05" izz="6.9e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.027793 -0.027242 -0.024087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_l_foot_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.027793 -0.027242 -0.024087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/l_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_hipjointupper_1">
+  <inertial>
+    <origin xyz="3.293764515506503e-05 0.0011112514569246636 -0.007400199793976686" rpy="0 0 0"/>
+    <mass value="0.005702042499396552"/>
+    <inertia ixx="1e-06" iyy="2e-06" izz="2e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.010956 0.012158 -0.25575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_hipjointupper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_hipjointupper_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.010956 0.012158 -0.25575" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_hipjointupper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_hipjointlower_1">
+  <inertial>
+    <origin xyz="-0.01625024230143616 -0.011463267372613306 -0.006653941986625472" rpy="0 0 0"/>
+    <mass value="0.06689532645492412"/>
+    <inertia ixx="2e-05" iyy="1.4e-05" izz="1.5e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.027656 0.008158 -0.233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_hipjointlower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_hipjointlower_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.027656 0.008158 -0.233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_hipjointlower_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_upperreg_1">
+  <inertial>
+    <origin xyz="0.0025897804665520243 0.016499957003041386 -0.03375567398425397" rpy="0 0 0"/>
+    <mass value="0.09097466003274826"/>
+    <inertia ixx="5.9e-05" iyy="5.6e-05" izz="1.3e-05" ixy="0.0" iyz="0.0" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011406 0.035658 -0.1935" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_upperreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_upperreg_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011406 0.035658 -0.1935" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_upperreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_lowerreg_1">
+  <inertial>
+    <origin xyz="0.004480568095000106 0.015970024519054358 -0.04182100699379358" rpy="0 0 0"/>
+    <mass value="0.06094435204808399"/>
+    <inertia ixx="2.9e-05" iyy="2.6e-05" izz="1.1e-05" ixy="-0.0" iyz="0.0" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011406 0.035658 -0.1285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_lowerreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_lowerreg_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011406 0.035658 -0.1285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_lowerreg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_ankle_1">
+  <inertial>
+    <origin xyz="0.00018862403314766178 0.01666382469926104 -0.0329296471921381" rpy="0 0 0"/>
+    <mass value="0.06757551562559605"/>
+    <inertia ixx="2e-05" iyy="1.4e-05" izz="1.6e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.008043 0.036158 -0.063587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_ankle_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.008043 0.036158 -0.063587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="r_foot_1">
+  <inertial>
+    <origin xyz="-0.020700151207551462 -0.023895258538627492 -0.021244534057540482" rpy="0 0 0"/>
+    <mass value="0.03847104970565036"/>
+    <inertia ixx="2.3e-05" iyy="4.8e-05" izz="6.9e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.027793 0.008158 -0.024087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="material_r_foot_1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.027793 0.008158 -0.024087" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://KHR3_001_description/meshes/r_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="continuous_joint_01" type="continuous">
+  <origin xyz="0.010956 0.009542 0.29475" rpy="0.0 0.0 0.0"/>
+  <parent link="base_link"/>
+  <child link="c_chest_c_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="fixed_joint_01" type="fixed">
+  <origin xyz="-0.026 0.0 0.03125" rpy="0.0 0.0 0.0"/>
+  <parent link="c_chest_c_1"/>
+  <child link="c_chest_b_1"/>
+</joint>
+
+<joint name="fixed_joint_02" type="fixed">
+  <origin xyz="0.026 0.0 0.03125" rpy="0.0 0.0 0.0"/>
+  <parent link="c_chest_c_1"/>
+  <child link="c_chest_a_1"/>
+</joint>
+
+<joint name="continuous_joint_02" type="continuous">
+  <origin xyz="0.0115 0.0 0.0595" rpy="0.0 0.0 0.0"/>
+  <parent link="c_chest_c_1"/>
+  <child link="c_head_a_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_03" type="continuous">
+  <origin xyz="0.0115 0.0489 0.04775" rpy="0.0 -0.7853981633974483 0.0"/>
+  <parent link="c_chest_c_1"/>
+  <child link="l_shoulder_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_04" type="continuous">
+  <origin xyz="0.01575 0.025 0.0" rpy="1.5707963267948966 0.0 0.0"/>
+  <parent link="l_shoulder_1"/>
+  <child link="l_upperarm_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_05" type="continuous">
+  <origin xyz="-0.016 0.0 -0.07175" rpy="0.0 0.0 0.0"/>
+  <parent link="l_upperarm_1"/>
+  <child link="l_elbow_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_06" type="continuous">
+  <origin xyz="0.0115 0.01625 -0.0145" rpy="0.0 -1.5707963267948966 0.0"/>
+  <parent link="l_elbow_1"/>
+  <child link="l_lowerarm_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_07" type="continuous">
+  <origin xyz="0.0115 -0.0489 0.04775" rpy="0.0 -0.7853981633974483 0.0"/>
+  <parent link="c_chest_c_1"/>
+  <child link="r_shoulder_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_08" type="continuous">
+  <origin xyz="0.01575 -0.025 0.0" rpy="-1.5707963267948966 0.0 0.0"/>
+  <parent link="r_shoulder_1"/>
+  <child link="r_upperarm_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_09" type="continuous">
+  <origin xyz="-0.016 0.0 -0.07175" rpy="0.0 0.0 0.0"/>
+  <parent link="r_upperarm_1"/>
+  <child link="r_elbow_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_10" type="continuous">
+  <origin xyz="0.0115 -0.01625 -0.0145" rpy="0.0 -1.5707963267948966 0.0"/>
+  <parent link="r_elbow_1"/>
+  <child link="r_lowerarm_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_11" type="continuous">
+  <origin xyz="0.010956 0.031242 0.25575" rpy="0.0 0.0 0.0"/>
+  <parent link="base_link"/>
+  <child link="l_hipjointupper_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_12" type="continuous">
+  <origin xyz="0.0167 -0.004 -0.02275" rpy="0.0 0.0 0.0"/>
+  <parent link="l_hipjointupper_1"/>
+  <child link="l_hipjointlower_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_13" type="continuous">
+  <origin xyz="-0.01625 0.0275 -0.0395" rpy="0.0 0.0 0.0"/>
+  <parent link="l_hipjointlower_1"/>
+  <child link="l_upperreg_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_14" type="continuous">
+  <origin xyz="0.0 0.0 -0.065" rpy="0.0 0.9651670763528647 0.0"/>
+  <parent link="l_upperreg_1"/>
+  <child link="l_lowerreg_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_15" type="continuous">
+  <origin xyz="-0.003363 0.0005 -0.064913" rpy="0.0 0.41713369122664473 0.0"/>
+  <parent link="l_lowerreg_1"/>
+  <child link="l_ankle_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_16" type="continuous">
+  <origin xyz="0.01975 -0.028 -0.0395" rpy="0.0 0.0 0.0"/>
+  <parent link="l_ankle_1"/>
+  <child link="l_foot_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_17" type="continuous">
+  <origin xyz="0.010956 -0.012158 0.25575" rpy="0.0 0.0 0.0"/>
+  <parent link="base_link"/>
+  <child link="r_hipjointupper_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_18" type="continuous">
+  <origin xyz="0.0167 0.004 -0.02275" rpy="0.0 0.0 0.0"/>
+  <parent link="r_hipjointupper_1"/>
+  <child link="r_hipjointlower_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_19" type="continuous">
+  <origin xyz="-0.01625 -0.0275 -0.0395" rpy="0.0 0.0 0.0"/>
+  <parent link="r_hipjointlower_1"/>
+  <child link="r_upperreg_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_20" type="continuous">
+  <origin xyz="0.0 0.0 -0.065" rpy="0.0 0.9651670763528647 0.0"/>
+  <parent link="r_upperreg_1"/>
+  <child link="r_lowerreg_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_21" type="continuous">
+  <origin xyz="-0.003363 -0.0005 -0.064913" rpy="0.0 0.41713369122664473 0.0"/>
+  <parent link="r_lowerreg_1"/>
+  <child link="r_ankle_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+<joint name="continuous_joint_22" type="continuous">
+  <origin xyz="0.01975 0.028 -0.0395" rpy="0.0 0.0 0.0"/>
+  <parent link="r_ankle_1"/>
+  <child link="r_foot_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit effort="100.0" velocity="100.0"/>
+</joint>
+
+</robot>
