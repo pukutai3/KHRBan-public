@@ -26,7 +26,9 @@ Python 3.12と`uv`を用意し、WSL上のROS 2ワークスペースの`src`に`
 
 ```bash
 cd /path/to/ros2_ws/src
-git clone https://github.com/pukutai3/KHRBan-public.git KHRBan
+git clone \
+  https://github.com/pukutai3/KHRBan-public.git \
+  KHRBan
 cd KHRBan
 uv sync
 ```
@@ -36,7 +38,8 @@ uv sync
 最初に学習経路を1反復だけ確認できます。GPUなど実行環境の準備と本学習の手順は[詳細ガイド](docs/training-and-evaluation.md)を参照してください。
 
 ```bash
-uv run khrban-train --task velocity --num-envs 16 --iterations 1 \
+uv run khrban-train --task velocity \
+  --num-envs 16 --iterations 1 \
   --run-name velocity-smoke
 ```
 
@@ -45,8 +48,11 @@ uv run khrban-train --task velocity --num-envs 16 --iterations 1 \
 自動学習は評価 → 未達なら追加学習 → 再評価を繰り返します。全条件に合格するまでラウンド数の上限は設けません。下のコマンドでは、学習環境のうち16体をライブ表示します。
 
 ```bash
-uv run khrban-auto-train --num-envs 1536 --iterations-per-round 2000 \
-  --live-viewer --viewer-num-envs 16 --keep-checkpoints 3
+uv run khrban-auto-train \
+  --num-envs 1536 \
+  --iterations-per-round 2000 \
+  --live-viewer --viewer-num-envs 16 \
+  --keep-checkpoints 3
 ```
 
 実行前に[評価条件とチェックポイント保持](docs/training-and-evaluation.md#達成までの自動学習)を確認してください。起き上がりは、歩行の合格記録と保護されたチェックポイントが揃うまで開始できません。
