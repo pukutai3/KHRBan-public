@@ -5,6 +5,7 @@
 <description>The KHR3_001_description package</description>
   <maintainer email="maintainer@example.com">Maintainer</maintainer>
   <license>PolyForm-Noncommercial-1.0.0</license>
+  <license file="meshes/LICENSE.md">CC-BY-NC-SA-4.0</license>
   <license>MIT</license>
   <license>Apache-2.0</license>
 
