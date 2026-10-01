@@ -19,6 +19,8 @@ ROS 2ワークスペースの `src` 直下に `KHRBan` と `microban` を並べ�
 
 `KHR3_001_description/meshes/` 内のSTLメッシュは [CC BY-NC-SA 4.0](KHR3_001_description/meshes/LICENSE.md) で公開します。改変物の共有にも同じライセンス条件が適用されます。それ以外のKHRBan独自コード・URDF・文書・画像は [PolyForm Noncommercial License 1.0.0](LICENSE) で公開します。いずれも商用利用は許可せず、OSI定義の「オープンソース」には該当しません。権利者の表示は GitHub の `pukutai3`、X の `@RC_pukupukutaiy` です。権利者表示にメールアドレスは使いません。商用利用の個別許諾が必要な場合は、GitHubアカウントへ問い合わせてください。
 
+STL以外の独自プログラムは、PolyFormの条件に従えば非商用目的でフォーク・改変・再配布できます。再配布時には[ライセンス本文のURLとRequired Notice](LICENSE)を残してください。Required Noticeには[元のKHRBan公開リポジトリ](https://github.com/pukutai3/KHRBan-public)を指定しています。GitHubでの表示だけに依存せず、配布物にもこの通知を含めてください。フォーク先の全コードを同一ライセンスにする義務を追加するものではありません。
+
 過去にMITで公開したコミットに、この変更を遡及適用することはできません。以前のMIT許諾で受け取ったコードやメッシュの商用利用を、この変更だけで禁止するものではありません。第三者由来の素材・コードには同梱の [MIT表示](KHR3_001_description/LICENSE) と [Apache-2.0表示](KHR3_001_description/viewer/THIRD_PARTY_LICENSE.txt) が別途適用されます。
 
 ## 推奨する学習順序
