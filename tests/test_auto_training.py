@@ -70,9 +70,9 @@ def test_default_tracking_thresholds_are_calibrated_to_microban_baseline() -> No
     assert criteria.max_standing_action_outside_unit_rate == 0.05
 
 
-def test_readme_documents_the_active_microban_calibrated_thresholds() -> None:
+def test_training_guide_documents_the_active_microban_calibrated_thresholds() -> None:
     criteria = EvaluationCriteria()
-    readme = Path("README.md").read_text(encoding="utf-8")
+    guide = Path("docs/training-and-evaluation.md").read_text(encoding="utf-8")
     expected_lines = (
         f"- 前後・左右速度のRMSE: {criteria.max_linear_velocity_rmse:.2f} m/s以下",
         "- 前・後・左・右を各1sample以上含み、4方向で最も悪い軸速度RMSE: "
@@ -83,7 +83,7 @@ def test_readme_documents_the_active_microban_calibrated_thresholds() -> None:
     )
 
     for line in expected_lines:
-        assert line in readme
+        assert line in guide
 
 
 def _checkpoint(path: Path, iteration: int, mtime: int) -> Path:
