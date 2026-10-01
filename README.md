@@ -15,6 +15,10 @@ ROS 2ワークスペースの `src` 直下に `KHRBan` と `microban` を並べ�
 
 この公開版は安定版 `main` のスナップショットです。個人環境の実行ログ、評価証拠、デスクトップショートカットは含みません。モデル・コードの動作確認には各自の環境で依存関係を導入してください。
 
+## ライセンス
+
+KHRBanの独自コード・モデル・文書は [MIT License](LICENSE) で公開します。権利者の表示は GitHub の `pukutai3`、X の `@RC_pukupukutaiy` です。権利者表示にメールアドレスは使いません。第三者由来の素材・コードには同梱の [MIT表示](KHR3_001_description/LICENSE) と [Apache-2.0表示](KHR3_001_description/viewer/THIRD_PARTY_LICENSE.txt) が別途適用されます。
+
 ## 推奨する学習順序
 
 KHRBanの主学習課題は、次の順に進めます。

@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "khrban"
 version = "0.1.0"
 description = "KHR actuator configuration and reinforcement-learning support"
+license = "MIT"
 requires-python = ">=3.12,<3.13"
 dependencies = [
   "better-actuator-models[mjlab]",
