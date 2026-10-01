@@ -30,6 +30,28 @@ from mjlab.viewer.native.keys import (
 from khrban.training_viewer import DEFAULT_LOG_ROOT, resolve_training_checkpoint
 
 
+BUNDLED_WALKING_POLICY = (
+    Path(__file__).resolve().parents[2] / "policies/velocity/model_179910.pt"
+)
+
+
+def resolve_keyboard_checkpoint(
+    checkpoint: Path | None,
+    log_root: Path = DEFAULT_LOG_ROOT,
+    bundled_policy: Path = BUNDLED_WALKING_POLICY,
+) -> Path:
+    """Prefer an explicit or local-training checkpoint, then the bundled policy."""
+
+    if checkpoint is not None:
+        return checkpoint.resolve()
+    try:
+        return resolve_training_checkpoint(log_root)
+    except FileNotFoundError:
+        if bundled_policy.is_file():
+            return bundled_policy
+        raise
+
+
 VELOCITY_TASK_ID = "Mjlab-KHR-Velocity-Flat"
 VELOCITY_STEP = 0.1
 VELOCITY_MAX = 1.0
@@ -245,11 +267,7 @@ def main() -> None:
     parser.add_argument("--print-checkpoint", action="store_true")
     args = parser.parse_args()
 
-    checkpoint = (
-        args.checkpoint.resolve()
-        if args.checkpoint is not None
-        else resolve_training_checkpoint(args.log_root)
-    )
+    checkpoint = resolve_keyboard_checkpoint(args.checkpoint, args.log_root)
     if not checkpoint.is_file():
         raise FileNotFoundError(f"チェックポイントがありません: {checkpoint}")
     if args.print_checkpoint:

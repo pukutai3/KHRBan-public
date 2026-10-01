@@ -90,6 +90,8 @@ microban本体と同じキー操作で、最新のKHR速度ポリシーをネイ
 uv run khrban-keyboard-policy --device cpu
 ```
 
+ローカルの歩行学習ログがない場合は、同梱の[評価済み歩行ポリシー](../policies/velocity/model_179910.pt)を自動選択します。公開版のポリシーを常に指定して再生する場合は、`--checkpoint policies/velocity/model_179910.pt`を追加してください。[評価値と由来](public-walking-policy-provenance.md)も参照できます。
+
 - `V`: 学習ポリシーの有効/無効
 - `↑` / `↓`: 前進/後進の正規化指令を0.1ずつ変更
 - `←` / `→`: 左/右旋回の正規化指令を0.1ずつ変更

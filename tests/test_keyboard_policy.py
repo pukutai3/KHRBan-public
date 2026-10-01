@@ -14,6 +14,7 @@ from khrban.keyboard_policy import (
     KeyboardVelocityState,
     MicrobanKeyboardViewer,
     apply_keyboard_command,
+    resolve_keyboard_checkpoint,
     scaled_velocity_command,
 )
 
@@ -90,6 +91,23 @@ def test_control_desk_exposes_independent_keyboard_policy_playback() -> None:
     assert "キーボード操作" in script
     assert "python -m khrban.keyboard_policy" in script
     assert "学習と独立" in script
+
+
+def test_keyboard_policy_uses_bundled_checkpoint_without_training_logs(
+    tmp_path: Path,
+) -> None:
+    bundled = tmp_path / "model_179910.pt"
+    bundled.write_bytes(b"bundled policy")
+    assert resolve_keyboard_checkpoint(
+        None, tmp_path / "missing-logs", bundled
+    ) == bundled
+
+
+def test_explicit_keyboard_checkpoint_overrides_bundled_policy(tmp_path: Path) -> None:
+    explicit = tmp_path / "chosen.pt"
+    assert resolve_keyboard_checkpoint(
+        explicit, tmp_path / "missing-logs", tmp_path / "bundle.pt"
+    ) == explicit.resolve()
 
 
 def test_keyboard_command_overrides_resampling_masks() -> None:

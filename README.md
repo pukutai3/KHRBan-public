@@ -2,7 +2,7 @@
 
 KHR-3HV（22軸）をMuJoCo/MjLabで再現し、前後・左右移動と旋回を強化学習するプロジェクトです。URDF、KRS-2552向けアクチュエータ設定、関節対応をKHR用に用意し、学習方式はmicrobanを参照しています。
 
-[使い始める](#使い始める) · [学習を開始する](#速度追従歩行を学習する) · [動作例を見る](#動作例) · [詳しい操作と評価](docs/training-and-evaluation.md) · [ライセンス](#ライセンス)
+[使い始める](#使い始める) · [学習済み歩行を再生](#学習済み歩行ポリシーを再生する) · [学習を開始する](#速度追従歩行を学習する) · [動作例を見る](#動作例) · [詳しい操作と評価](docs/training-and-evaluation.md) · [ライセンス](#ライセンス)
 
 <img src="assets/khrban-simulation.png" alt="MuJoCoシミュレーション空間に立つKHR-3HVモデル" width="340">
 
@@ -13,12 +13,13 @@ KHR-3HV（22軸）をMuJoCo/MjLabで再現し、前後・左右移動と旋回�
 | 項目 | 公開版の状態 |
 | --- | --- |
 | KHR-3HVモデル | 22軸のURDF・メッシュ、KRS-2552向けアクチュエータ設定を収録 |
+| 学習済み歩行ポリシー | [`model_179910.pt`](policies/velocity/model_179910.pt)を収録。公開版のシミュレーション評価に合格 |
 | 速度追従歩行 | 前後・左右移動と旋回の学習、自動評価、未達時の追加学習を実装 |
 | 学習中の表示 | 実際の学習環境から選んだ16体をライブビューアに表示 |
 | 単独の起き上がり | 学習・姿勢別評価の経路を用意。GPUスモークと実学習は未確認 |
 | 歩行と転倒回復の統合 | 未実装 |
 
-> **公開版の検証範囲:** 学習済みチェックポイント、実行ログ、評価証拠は同梱していません。「実装」は目標達成の実証を意味しません。評価条件は[学習・操作・評価ガイド](docs/training-and-evaluation.md)を参照してください。
+> **公開版の検証範囲:** 歩行ポリシーと[評価結果](policies/velocity/evaluation.json)を同梱しています。合格はシミュレーションの評価条件によるもので、実機性能や起き上がりの達成を示しません。個人環境の実行ログは同梱していません。
 
 ## 使い始める
 
@@ -42,6 +43,18 @@ uv run khrban-train --task velocity \
   --num-envs 16 --iterations 1 \
   --run-name velocity-smoke
 ```
+
+## 学習済み歩行ポリシーを再生する
+
+同梱の歩行ポリシーを、microbanと同じネイティブMuJoCoビューワーでキーボード操作できます。上記の`uv sync`後、WSLの画面表示が使える環境で実行してください。
+
+```bash
+uv run khrban-keyboard-policy \
+  --checkpoint policies/velocity/model_179910.pt \
+  --device cpu
+```
+
+起動後はMuJoCoウィンドウを選び、`V`で方策を有効にします。矢印キーで移動・旋回、`X`で速度指令をゼロ、`R`でリセット、`Q`で終了します。チェックポイントを指定しない場合はローカルの学習ログを優先し、なければ同梱版を使います。Windows Control Deskの「キーボード操作」も同じ選択順です。[評価値と由来](docs/public-walking-policy-provenance.md)を確認できます。
 
 ## 速度追従歩行を学習する
 
@@ -96,7 +109,7 @@ WindowsのControl Deskは`tools/windows/KHRBan-GUI.ps1`です。起動前に次�
 | 対象 | 条件 |
 | --- | --- |
 | `KHR3_001_description/meshes/*.stl` | [CC BY-NC-SA 4.0](KHR3_001_description/meshes/LICENSE.md) |
-| その他のKHRBan独自コード・URDF・文書・画像 | [PolyForm Noncommercial 1.0.0](LICENSE) |
+| その他のKHRBan独自コード・URDF・文書・画像・学習済みポリシー | [PolyForm Noncommercial 1.0.0](LICENSE) |
 | 第三者由来の素材・コード | 同梱の[MIT表示](KHR3_001_description/LICENSE)または[Apache-2.0表示](KHR3_001_description/viewer/THIRD_PARTY_LICENSE.txt) |
 
 独自プログラムはPolyFormの条件に従い、非商用目的でフォーク・改変・再配布できます。配布時は次を守ってください。
